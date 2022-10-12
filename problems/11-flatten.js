@@ -35,13 +35,13 @@ function flatten(arr) {
 
     arr.forEach(ele => {
       if (Array.isArray(ele)) {
-        flat.push(...flatten(ele));
+        flat.push(...flatten(ele)); // gets array from running flatten(el <= [an array]), spreads array vals into push
       } else {
-        flat.push(ele);
+        flat.push(ele); // pushes non array elements into array
       }
     });
 
-    return flat;
+    return flat; // always returns an array
   }
 
 
